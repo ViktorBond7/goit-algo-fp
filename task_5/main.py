@@ -11,11 +11,13 @@ def generate_gradient_colors(n, start_rgb=(0x12, 0x30, 0x60), end_rgb=(0xB0, 0xD
     # Якщо потрібен лише один колір — повертаємо стартовий
     if n <= 1:
         r, g, b = start_rgb
+        print("r", r)
         return [f"#{r:02X}{g:02X}{b:02X}"]
 
     sr, sg, sb = start_rgb
     er, eg, eb = end_rgb
-    # передкомпонуємо різниці каналів
+    # перекомпонуємо різниці каналів
+    
     dr, dg, db = er - sr, eg - sg, eb - sb
 
     # будуємо список через comprehension
@@ -62,7 +64,6 @@ def bfs(root, colors):
 
 
 if __name__== "__main__":
-    # === Запуск ===
     heap = [10, 20, 30, 40, 50, 60, 70]
     root = build_tree_from_heap(heap)
 
