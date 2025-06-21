@@ -8,7 +8,6 @@ items = {
 }
 
 def dynamic_programming(budget):
-
     n = len(items)
     names = list(items.keys())
     
@@ -17,7 +16,6 @@ def dynamic_programming(budget):
 
     # keep[i][w] = True, якщо i-тий предмет береться в оптимальне рішення при бюджеті w
     keep = [[False] * (budget + 1) for _ in range(n + 1)]
-   
     
     # Заповнюємо таблицю dp
     for i in range(1, n + 1):
@@ -48,7 +46,6 @@ def dynamic_programming(budget):
 
 
 if __name__ == "__main__":
-    
     max_cal, choice = dynamic_programming(100)
     print(f"Максимально можна набрати {max_cal} калорій, вибравши: {choice}")
 

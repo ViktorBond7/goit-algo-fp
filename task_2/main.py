@@ -1,5 +1,6 @@
 import turtle
 import math
+from colorama import Fore, Style
 
 def draw_tree(x, y, length, angle, level):
     if level == 0:
@@ -22,6 +23,10 @@ def draw_tree(x, y, length, angle, level):
 
 def main():
     level = int(input("Введіть рівень рекурсії (наприклад, 7): "))
+
+    if level > 10:
+        print(f"{Fore.RED}Рівень рекурсії не повинен перевищувати 10!!! {Style.RESET_ALL}")
+        return
 
     turtle.speed("fastest")
     turtle.bgcolor("white")

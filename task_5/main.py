@@ -16,8 +16,8 @@ def generate_gradient_colors(n, start_rgb=(0x12, 0x30, 0x60), end_rgb=(0xB0, 0xD
 
     sr, sg, sb = start_rgb
     er, eg, eb = end_rgb
-    # перекомпонуємо різниці каналів
     
+    # перекомпонуємо різниці каналів
     dr, dg, db = er - sr, eg - sg, eb - sb
 
     # будуємо список через comprehension
